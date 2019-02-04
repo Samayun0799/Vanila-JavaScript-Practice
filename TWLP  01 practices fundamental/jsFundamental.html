@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Fundamental</title>
+	<style type="text/css">
+		
+		button{
+			transform: (translate: [0,1,-4]);
+			transform: translate(1,0,4);
+		}
+	</style>
+</head>
+<body  onload="checkCodingEvent()">
+<input type="text" name="name" id="codeText">
+<button onclick="checkCoding()">SUBMIT</button>
+
+<button id="action"> Your Action</button>
+
+<div id="show"></div>
+
+<div>
+	<span id="hour"></span>
+	<span id="minute"></span>
+	<span id="second"></span>
+</div>
+<script type="text/javascript" src="math-calc.js"></script>
+<script type="text/javascript" src="0.js"></script>
+<script type="text/javascript">
+	
+	function liveProject(){
+		var a = 200
+		this.x = 300
+		this.y=400
+		this.z = function () {
+			return this.x + this.y
+		}
+	}
+	var lp = new liveProject()
+    document.write(lp.a)
+
+
+
+
+    console.log("======PART_39=========\n")
+var num = prompt("ENTER a num")
+function factorial(n){
+	if (n==0) {
+		return 1
+	}else{
+		product = 1
+		for (var i = 1; i <= n ; i++) {
+			product *= i
+		}
+		return product
+	}
+}
+
+console.log(factorial(-2))
+console.log(factorial(num))
+
+</script>
+</body>
+</html>

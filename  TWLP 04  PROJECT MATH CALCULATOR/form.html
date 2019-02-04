@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Samayun Math Calculator</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+input[type="button"] {
+    color: #fff;
+    background: #000;
+    border: navajowhite;
+    line-height: 2;
+    width: 216px;
+}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<form name="form" accept="" method="">
+		<label>Email</label>
+		<input type="email" name="email" id="email" required=""> 
+		<label>Password: </label>
+		<input type="password" name="" id="password">
+			<div class="d-flex">
+						<input type="submit" name="" value="Submit" class="btn-danger btn" onclick="this.preventDeafault()">
+					<input type="reset" name="" value="Refresh" class="btn btn-default">
+			</div>
+
+	</form>
+</div>
+
+
+<div class="container">
+	
+	<form name="myForm">
+		<input type="text" name="t1" id="" onchange="docCal(this.form , this.name)">
+		<input type="checkbox" name="chbox" onclick ="docCal(this.form , this.name)">
+		<input type="text" name="result" onchange="docCal(this.form , this.name)">
+		<input type="reset" name="" value="Refresh">
+	</form>
+
+</div>
+
+
+<div class="container">
+	<label class="list-groups text-primary">Select</label>
+	<ul>
+		<li class="list-group-item">
+		 <input type="checkbox" name="checkbox" class="p-5" value="JavaScript">JavaScript </li>
+		 
+		 <li class="list-group-item">
+		 <input type="checkbox" name="checkbox" class="p-5" value="PHP">PHP </li>
+
+		 		<li class="list-group-item">
+		 <input type="checkbox" name="checkbox" class="p-5" value="Python">Python </li>
+	</ul>
+
+	<div class="bg-default">
+<form name="selectForm" onsubmit="testCode()">
+	
+</form>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		
+		function testResult(form) {
+			var testvar = form.inputBox.value
+
+			if (testvar == "") {
+                  alert("Please Type Something......")
+			} else {
+           alert("You Typed " + testvar)
+			}
+		}
+
+
+
+  function docCal(form , pfeild) {
+  	if (pfeild == "result") {
+  		if (form.chbox.checked){
+            form.t1.value = Math.sqrt(form.result.value)
+  		} else {
+               form.t1.value = form.result.value/2
+  		}
+  	} else {
+            if (form.chbox.checked) {
+            	form.result.value = form.t1.value* form.t1.value
+            } else {
+            	form.result.value = form.result.value/2
+            }
+  	}
+  }
+
+
+
+function  testCode(){
+	document.write("You Selected "+ selectedCode() )
+}
+
+function selectedCode() {
+	var cd = "<ul>"
+	for(i=1; i<=3; i++ ){
+		var myValue = document.myform.chboc[i]
+		if (true) {}
+	}
+}
+
+</script>
+</body>
+</html>

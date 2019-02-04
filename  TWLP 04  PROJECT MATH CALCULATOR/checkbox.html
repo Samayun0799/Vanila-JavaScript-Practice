@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Samayun Math Calculator</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+input[type="button"] {
+    color: #fff;
+    background: #000;
+    border: navajowhite;
+    line-height: 2;
+    width: 216px;
+}
+	</style>
+</head>
+<body>
+
+
+<div class="container">
+		<form name="myform" method="" action=""onsubmit="testCode()" >
+				<!-- 	<label class="list-groups">Select</label>
+				<ul>
+
+					<li class="list-group-item">
+					 <input type="checkbox" name="chbox" class="p-5" value="JavaScript">JavaScript 
+
+					</li>
+					 
+					 <li class="list-group-item">
+					 <input type="checkbox" name="chbox" class="p-5" value="PHP">PHP </li>
+
+					 		<li class="list-group-item">
+					 <input type="checkbox" name="chbox" class="p-5" value="Python">Python </li>
+				</ul> -->
+
+
+<input type="checkbox" name="chbox" value="JavaScript"> 
+
+<input type="checkbox" name="chbox" value="PHP"> 
+
+<input type="checkbox" name="chbox" value="Python"> 
+
+				<input type="submit" name="submit" value="Submit" >
+				<input type="reset" name="reset" value="Refresh">
+			</form>
+
+</div>
+
+	<script type="text/javascript">
+		
+function  testCode(){
+	document.write("You Selected "+selectedCode())
+}
+
+
+// var prevent = document.querySelector('input[type="submit"]')
+// prevent.addEventListener('click' , function (e) {
+// 	e.preventDefault()
+// })
+
+</script>
+</body>
+</html>

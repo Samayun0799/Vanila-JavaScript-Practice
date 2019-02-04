@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Samayun Math Calculator</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+input[type="button"] {
+    color: #fff;
+    background: #000;
+    border: navajowhite;
+    line-height: 2;
+    width: 216px;
+}
+	</style>
+</head>
+<body>
+<div class="container">
+ <h4>isEmailValid</h4>
+	<input type="text" name="" class="form-control" id="email" onkeyup="validateEmail()">
+</div>
+
+<div class="container">
+	<div class="d-flex">
+		<input type="text" name="" id="input" class="form-control ">
+	<button class="btn btn-primary" onclick="myreg()">Replace</button>
+	</div>
+	<div id="searchResult"> My Name is Delowar </div>
+
+	<div id="str">
+The oldest classical Greek and Latin writing had little or no space between words and could be written in boustrophedon (alternating directions). Over time, text direction (left to right) became standardized, and word dividers and terminal punctuation became  The hedera leaf (e.g. ☙) has also been used in the same way.
+	</div>
+</div>
+
+<div class="container">
+	<h3 class="text-danger">Reg Exp</h3>
+	<div class="d-flex">
+		<input type="text" name="" id="getRegValue">
+		<input type="button" name="" value="Check" onclick="getNumber()">
+	</div>
+	<div>
+		<textarea  id="regexOutput" class="" rows="5" cols="45"></textarea>
+	</div>
+	 <!-- w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.  -->
+</div>
+
+<section class="container mt-2">
+	<form name="frm">
+		<table class="table table-hover bg-dark">
+			<caption>MATH PROJECT</caption>
+			<tr>
+				<td class="text-white">Input BOX: </td>
+				<td><input type="text" name="getValue" id="getValue"></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="Absolute" value="Absolute" onclick="calclate(1)"></td>
+				<td><input type="button" name="Round" onclick="calclate(2)" value="Round"> </td>
+			</tr>
+			<tr>
+				<td><input type="button" name="Sine" value="Sine" onclick="calclate(3)"></td>
+				<td><input type="button" name="Cos" onclick="calclate(4)" value="Cos "> </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Tangent"
+				 onclick="calclate(5)"></td>
+				<td><input type="button" value="LOG"
+				 onclick="calclate(6)" > </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Floor"
+				 onclick="calclate(7)"></td>
+				<td><input type="button" value="Ceil"
+				 onclick="calclate(8)" > </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Max" onclick="calclate(9)"></td>
+				<td><input type="button" onclick="calclate(10)" value="Min"> </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Square Root" onclick="calclate(11)"></td>
+				<td><input type="button" onclick="calclate(12)" value="Random"> </td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="E" onclick="calclate(13)"></td>
+				<td><input type="button" onclick="calclate(14)" value="Pi"> </td>
+			</tr>
+			<tr>
+				<td class="text-white">Result Box : </td>
+				<td><input type="text" name="showresult" id="showresult"></td>
+			</tr>
+		</table>
+	</form>
+</section>
+
+<script type="text/javascript">
+	function myreg() {
+	// var str = document.getElementById("input").value
+	// // var search = str.search(/with/i)
+	// var input = str.replace(/^samayun/i , str)
+	// document.getElementById("searchResult").innerHTML = input
+
+
+   txt = document.getElementById('str').textContent
+   // document.getElementById('str').innerHTML = /x/i.exec(txt)
+
+
+
+
+
+}
+
+</script>
+<script type="text/javascript" src="math.js"></script>
+</body>
+</html>

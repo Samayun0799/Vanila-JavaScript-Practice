@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO Application</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<div class="container">
+	<div class="controls mt-2">
+		<h1 class="myheader">My Awesome todo</h1>
+		<input type="text" name="input" id="input" class="form-control"><br>
+
+
+<div class="d-flex">
+			<button class="btn btn-primary" type="button" id="add">ADD TODO</button>
+        
+		<button class="btn btn-danger" type="button" id="remove">Remove  TODO</button>
+</div>
+
+	</div>
+	<ul class="list-group" id="list">
+		<li class="list-group-items myCheck">
+			<input type="checkbox" name="checkbox" id="check">
+		    <label for="">Go to Gym</label>
+		</li>
+		<li class="list-group-items">
+			<input type="checkbox" name="checkbox" id="check" checked>
+			<label>Record Youtube videos </label>
+		</li>
+		
+	</ul>
+</div>
+
+<script type="text/javascript" src="todo.js"></script>
+</body>
+</html>

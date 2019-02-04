@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validatiion</title>
+   <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+   <style type="text/css">
+   	select{
+   		font-size: 1.2em;
+   	}
+   </style>
+</head>
+<body>
+<div class="container">
+	<form action="" method="post" name="myform"  onsubmit="return validateForm()" >
+		<table class="table table-hover">
+						<tr>
+				<td>Name:</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+
+			<tr>
+				<td>Telephone:</td>
+				<td>
+					<input type="text" name="telephone"><br>
+				   <input type="checkbox" 
+				   name="notCall"
+				    onclick="enableDisable(this)"> Please don't call me
+				</td>
+			</tr>
+
+			<tr>
+				<td>What can we help you ?:</td>
+				<td>
+					<select name="subject" value="">
+						<option>Select One</option>
+						<option>Customer Service</option>
+						<option> Question</option>
+					</select>
+				</td>
+			</tr>
+            <tr>
+            	<td>Comment</td>
+            	<td> <input type="text" name="comment"></td>
+            </tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="" value="Submit"> </td>
+			    <td>
+			    	<input type="reset" name="" value="Refresh">
+			    </td>
+			</tr>
+			<tr>
+				<td class="w-100"> 
+					<div id="state" class="text-danger"></div>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	function validateForm() {
+	    var name = document.myform.name
+	    var email = document.myform.email
+        var telephone= document.myform.telephone
+        var notCall= document.myform.notCall
+        var subject= document.myform.subject
+
+        var state = document.getElementById('state')
+        if (name.value == ""){
+         state.innerHTML = "Please Enter Your Name";
+                 return false;
+        }
+      //   if (email.value == "") {
+      //        state.innerHTML = "Please Enter Your Email"
+      //        return false
+      //   }
+      //   if (email.value.indexOf("@", 0)<0) {
+      //   	state.innerHTML = "Please Enter a valid Email"
+      //   	return false
+      //   }
+      // if (email.value.indexOf(".", 0)<0) {
+      //   	state.innerHTML = "Please Enter a valid Email"
+      //   	return false
+      //   }
+       if (telephone.value =="" && notCall.checked == false) {
+       	state.innerHTML = "Please Give Your Telephone Number"
+       	return false
+       }
+       if (subject.selectedIndex <1){
+       	  state.innerHTML = "Please tell us how can we hep you ?"
+       	  return false
+       }
+
+    }
+
+
+       function  enableDisable(chbox) {
+       	if (chbox.checked == true) {
+       		document.myform.telephone.disabled = true
+       	} else {
+       		document.myform.telephone.disabled = false
+       	}
+       }
+
+
+</script>
+</body>
+</html>
